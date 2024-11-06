@@ -83,6 +83,7 @@ let whereAmI=async function(){
     let cc=await fetch(`https://restcountries.com/v3.1/alpha/${data.countryCode}`);
      let data1=cc.json();
      let data2=await data1;
+       console.log(data2);
      renderCountry(data2[0]);
     }catch(err){
       console.log(err.message);
